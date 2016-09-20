@@ -1,0 +1,674 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>纺大</title>
+  <link rel="stylesheet" href="css/jquery.fullPage.css">
+  <link rel="stylesheet" href="css/index.css">
+
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/jquery-ui-1.10.3.min.js"></script>
+  <script src="js/jquery.fullPage.min.js"></script>
+  <script src="js/echarts.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $.fn.fullpage({
+        //slidesColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90','#f9abr0','#fddf90'],
+        anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7'],
+        //navigation: true
+        menu: '#menu'
+      });
+
+
+    });
+    /*$('#menu').delegate('li','click',function () {
+     //数字翻转效果
+     console.log(234);
+     if ($(".num6").parents('li').hasClass('active')){
+     console.log(123);
+     //				50个数，30000,30s，5个数呢？
+     $('.dataStatistics').dataStatistics({min:10,max:15,time:3000,len:4});
+
+     }
+     })*/
+
+  </script>
+</head>
+
+<body style="min-width: 960px; overflow: auto">
+<!-- nav start  -->
+<ul id="menu">
+  <li data-menuanchor="page1" class="active"><a href="#page1" class="num1"></a></li>
+  <li data-menuanchor="page2"><a href="#page2" class="num2"></a></li>
+  <li data-menuanchor="page3"><a href="#page3" class="num3"></a></li>
+  <li data-menuanchor="page4"><a href="#page4" class="num4"></a></li>
+  <li data-menuanchor="page5"><a href="#page5" class="num5"></a></li>
+  <li data-menuanchor="page6"><a href="#page6" class="num6"></a></li>
+  <li data-menuanchor="page7"><a href="#page7" class="num7"></a></li>
+</ul>
+<!-- nav end  -->
+
+<!-- head start  -->
+<div class="head">
+  <div class="head-semester">
+    <p class="orange">
+      <span>2015-2016</span>学年度第二学期一卡通消费账单
+    </p>
+  </div>
+</div>
+<!-- head end  -->
+
+<!-- 总表 start  -->
+<div class="section ">
+  <div class="section1 comm_box" style="">
+    <!-- 医院 -->
+    <div class="hospital share">
+      <p class="black font22 bold">22%</p>
+      <p class="dark-orange font19 lineheight">( ￥ 240 )</p>
+    </div>
+    <!-- 超市 -->
+    <div class="supermarket share">
+      <p class="black font22 bold">12%</p>
+      <p class="dark-orange font19 lineheight">( ￥ 80 )</p>
+    </div>
+    <!-- 食堂 -->
+    <div class="canteen share">
+      <p class="black font22 bold">32%</p>
+      <p class="dark-orange font19 lineheight">( ￥ 340 )</p>
+    </div>
+    <!-- 用水 -->
+    <div class="water share">
+      <p class="black font22 bold">18%</p>
+      <p class="dark-orange font19 lineheight">( ￥ 180 )</p>
+    </div>
+    <!-- 用电 -->
+    <div class="electricity share">
+      <p class="black font22 bold">16%</p>
+      <p class="dark-orange font19 lineheight">( ￥ 140 )</p>
+    </div>
+    <!-- 中间文字 -->
+    <div class="tab-center gray">
+      <p>2015-2016学年度第二学期</p>
+      <p class="last">一卡通消费账单总表</p>
+    </div>
+  </div>
+
+</div>
+<!-- 总表 end  -->
+
+<!-- canteen start  -->
+<div class="section">
+  <div class="section2 comm_box clear com-box" style="">
+    <div class="left leftbar">
+      <div class="canteen-banner com-tit">
+        <p class="tit1">食堂消费情况</p>
+        <p class="tit2">本学期食堂消费总金额超过86.2%的在校同学</p>
+      </div>
+      <div class="echart-box" id="canteen_echart">
+      </div>
+    </div>
+    <div class="right rightbar">
+      <ul class="category top7">
+        <li>
+          <p class="subtitle gray"><i></i>本学期食堂消费总金额</p>
+          <p class="money black0"><span class="">4,032</span>元</p>
+          <div class="rightbar-icon">
+            <i class="blue-pig"></i>
+          </div>
+        </li>
+        <li>
+          <p class="subtitle gray"><i></i>光顾人数最多的食堂</p>
+          <p class="money black0 bold">第一食堂</p>
+          <div class="rightbar-icon">
+            <i class="canteen-icon"></i>
+          </div>
+        </li>
+        <li>
+          <p class="subtitle gray"><i></i>本学期食堂消费总次数</p>
+          <p class="money black0"><span class="">300</span>元</p>
+          <div class="rightbar-icon">
+            <i class="blue-frequency"></i>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- canteen end  -->
+
+<!-- supermarket start -->
+<div class="section">
+  <div class="section3 comm_box clear com-box" style="">
+    <div class="left leftbar">
+      <div class="supermarket-banner com-tit">
+        <p class="tit1">超市消费情况</p>
+        <p class="tit2">本学期超市消费总金额超过86.2%的在校同学</p>
+      </div>
+      <div class="echart-box" id="supermarket_echart">
+      </div>
+    </div>
+    <div class="right rightbar">
+      <ul class="category top7">
+        <li class="double">
+          <p class="subtitle gray"><i></i>本学期超市消费总金额</p>
+          <p class="money black0"><span class="">4,032</span>元</p>
+          <div class="rightbar-icon">
+            <i class="orange-pig"></i>
+          </div>
+        </li>
+        <li class="double">
+          <p class="subtitle gray"><i></i>本学期超市消费总次数</p>
+          <p class="money black0"><span class="">300</span>元</p>
+          <div class="rightbar-icon">
+            <i class="orange-frequency"></i>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- supermarket end -->
+
+<!-- hospital start -->
+<div class="section">
+  <div class="section4 comm_box clear com-box" style="">
+    <div class="left leftbar">
+      <div class="hospital-banner com-tit">
+        <p class="tit1">医院消费情况</p>
+        <p class="tit2">本学期医院消费总金额超过86.2%的在校同学</p>
+      </div>
+      <div class="echart-box" id="hospital_echart">
+      </div>
+    </div>
+    <div class="right rightbar">
+      <ul class="category top7">
+        <li class="double">
+          <p class="subtitle gray"><i></i>本学期医院消费总金额</p>
+          <p class="money black0"><span class="">4,032</span>元</p>
+          <div class="rightbar-icon">
+            <i class="green-pig"></i>
+          </div>
+        </li>
+        <li class="double">
+          <p class="subtitle gray"><i></i>本学期医院消费总次数</p>
+          <p class="money black0"><span class="">300</span>元</p>
+          <div class="rightbar-icon">
+            <i class="green-frequency"></i>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- hospital end -->
+
+<div class="section">
+  <div class="section5 comm_box" style="">
+    <p class="water-tit center bold">用水消费情况</p>
+    <div class="water-size black0">总消费 <span>40</span> 吨</div>
+    <div class="water-money black0 bold">本学期用水总计消费 160 元</div>
+    <div class="water-ranking black0 bold">居于全校平均消费水平的前67%</div>
+
+    <div class="water-echart" id="water_echart">
+
+    </div>
+  </div>
+</div>
+
+<div class="section">
+      <div class="section6 comm_box" style="">
+        <strong><p class="water-tit center bold">宿舍用电消费情况</p >
+          <p class="consume bold">本学期宿舍总计用电 <span>kwh</span></p >
+          <p class="consume2 bold clear"><i class="left">相当于经历了 </i> <span class="bold left black0">400000</span> <i class="left"> 次冰桶挑战进行水利发电</i></p >
+          <p class="consume3">(1kwh相当于10000次冰桶挑战)</p >
+          <p class="consume4 bold clear"><i class="left">相当于将一盏路灯持续点亮 </i><span class="bold left black0">160</span><i class="left">小时</i></p >
+          <p class="consume5">(1kwh相当于10000次冰桶挑战)</p ></strong>
+      </div>
+    </div>
+
+<div class="section">
+  <div class="section7 comm_box" style="">
+    <div class="left-bg">
+      <a href="#">
+        <p class="bold">点击查看</p>
+        <p class="bold">同路人</p>
+      </a>
+    </div>
+    <div class="box-one">
+      <div class="line-bg">
+
+      </div>
+
+      <div class="littie-man-wrap littie-man0">
+        <img src="images/bg-circle.png" alt="" class="circle-bg-border">
+        <img src="images/bg0.png" alt="" class="circle-bg">
+        <img src="images/lp0.png" alt="" class="lp">
+        <div class="littie-man-said dn">
+          <p>应沙沙（管理学院）</p>
+          <p>相遇地点：医院</p>
+          <p>相遇次数：3次</p>
+        </div>
+      </div>
+      <div class="littie-man-wrap littie-man1">
+        <img src="images/bg-circle.png" alt="" class="circle-bg-border">
+        <img src="images/bg1.png" alt="" class="circle-bg">
+        <img src="images/lp1.png" alt="" class="lp">
+        <div class="littie-man-said dn">
+          <p>应沙沙（管理学院）</p>
+          <p>相遇地点：医院</p>
+          <p>相遇次数：3次</p>
+        </div>
+      </div>
+      <div class="littie-man-wrap littie-man2">
+        <img src="images/bg-circle.png" alt="" class="circle-bg-border">
+        <img src="images/bg2.png" alt="" class="circle-bg">
+        <img src="images/lp2.png" alt="" class="lp">
+        <div class="littie-man-said dn">
+          <p>应沙沙（管理学院）</p>
+          <p>相遇地点：医院</p>
+          <p>相遇次数：3次</p>
+        </div>
+      </div>
+      <div class="littie-man-wrap littie-man3">
+        <img src="images/bg-circle.png" alt="" class="circle-bg-border">
+        <img src="images/bg3.png" alt="" class="circle-bg">
+        <img src="images/lp3.png" alt="" class="lp">
+        <div class="littie-man-said dn">
+          <p>应沙沙（管理学院）</p>
+          <p>相遇地点：医院</p>
+          <p>相遇次数：3次</p>
+        </div>
+      </div>
+      <div class="littie-man-wrap littie-man4">
+        <img src="images/bg-circle.png" alt="" class="circle-bg-border">
+        <img src="images/bg4.png" alt="" class="circle-bg">
+        <img src="images/lp4.png" alt="" class="lp">
+        <div class="littie-man-said dn">
+          <p>应沙沙（管理学院）</p>
+          <p>相遇地点：医院</p>
+          <p>相遇次数：3次</p>
+        </div>
+      </div>
+      <div class="littie-man-wrap littie-man5">
+        <img src="images/bg-circle.png" alt="" class="circle-bg-border">
+        <img src="images/bg5.png" alt="" class="circle-bg">
+        <img src="images/lp5.png" alt="" class="lp">
+        <div class="littie-man-said dn">
+          <p>应沙沙（管理学院）</p>
+          <p>相遇地点：医院</p>
+          <p>相遇次数：3次</p>
+        </div>
+      </div>
+      <div class="littie-man-wrap littie-man6">
+        <img src="images/bg-circle.png" alt="" class="circle-bg-border">
+        <img src="images/bg6.png" alt="" class="circle-bg">
+        <img src="images/lp6.png" alt="" class="lp">
+        <div class="littie-man-said dn">
+          <p>应沙沙（管理学院）</p>
+          <p>相遇地点：医院</p>
+          <p>相遇次数：3次</p>
+        </div>
+      </div>
+      <div class="littie-man-wrap littie-man7">
+        <img src="images/bg-circle.png" alt="" class="circle-bg-border">
+        <img src="images/bg7.png" alt="" class="circle-bg">
+        <img src="images/lp7.png" alt="" class="lp">
+        <div class="littie-man-said dn littie-man-said-top ">
+          <p>应沙沙（管理学院）</p>
+          <p>相遇地点：医院</p>
+          <p>相遇次数：3次</p>
+        </div>
+      </div>
+      <div class="littie-man-wrap littie-man8">
+        <img src="images/bg-circle.png" alt="" class="circle-bg-border">
+        <img src="images/bg8.png" alt="" class="circle-bg">
+        <img src="images/lp8.png" alt="" class="lp">
+        <div class="littie-man-said dn littie-man-said-top ">
+          <p>应沙沙（管理学院）</p>
+          <p>相遇地点：医院</p>
+          <p>相遇次数：3次</p>
+        </div>
+      </div>
+      <div class="littie-man-wrap littie-man9">
+        <img src="images/bg-circle.png" alt="" class="circle-bg-border">
+        <img src="images/bg9.png" alt="" class="circle-bg">
+        <img src="images/lp9.png" alt="" class="lp">
+        <div class="littie-man-said dn littie-man-said-top ">
+          <p>应沙沙（管理学院）</p>
+          <p>相遇地点：医院</p>
+          <p>相遇次数：3次</p>
+        </div>
+      </div>
+    </div>
+    <div class="box-two"></div>
+    <div class="box-three">
+      <p class="bold">去认识下你身边最熟悉的陌生人吧，</p>
+      <p class="bold"> 新的学期让我们有更多可能！</p>
+    </div>
+  </div>
+</div>
+<script>
+
+  $('.left-bg a').one('click', function () {
+   // $('.box-one').animate({'width': '770'}, 3000, function () {
+    $('.box-one').animate({'width': '755'}, 3000, function () {
+      $('.box-two').animate({'top': '380', 'height': 0}, 500,function () {
+        $('.box-one').width('770').css('overflow', 'visible');
+      });
+    }
+//,setTimeout(function () {
+//        $('.box-one').width('770').css('overflow', 'visible');
+//    })
+    )
+  })
+
+
+</script>
+
+<script type="text/javascript">
+  //食堂
+  var myChart = echarts.init(document.getElementById('canteen_echart'));
+  myChart.setOption({
+    color: ['#99cce9', '#ea6715'],
+    title: {
+      text: '本学期消费趋势图',
+      left: 'center',
+      textStyle: {}
+    },
+    tooltip: {
+      trigger: 'axis'
+    },
+    legend: {
+      x: 'right',
+      data: ['全向平均消费', '我的消费']
+    },
+    grid: {
+      //top:'14%',
+      left: '3%',
+      right: '8%',
+      bottom: '5%',
+      containLabel: true
+    },
+
+    xAxis: {
+      name: '日期',
+      type: 'category',
+      splitLine: {
+        show: true,
+        lineStyle: {
+          color: 'rgba(255,255,255,0.1)',
+        }
+      },
+      axisTick: {
+        show: false
+      },
+      boundaryGap: false,
+      data: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月']
+    },
+    yAxis: {
+      type: 'value',
+      name: '金额（元）',
+      axisLine: {
+        show: false,
+        lineStyle: {
+          //color:'rgba(255,255,255,0.5)',
+        }
+      },
+      axisTick: {
+        show: false
+      },
+      splitLine: {
+        show: true,
+        lineStyle: {
+          type: 'dashed',
+          color: 'rgba(0,0,0,0.2)',
+        }
+      },
+    },
+    series: [
+      {
+        name: '全向平均消费',
+        type: 'line',
+        stack: '总量',
+        data: [120, 132, 101, 134, 90, 230, 210, 101, 134, 90, 230, 210]
+      },
+      {
+        name: '我的消费',
+        type: 'line',
+        stack: '总量',
+        data: [220, 182, 191, 234, 290, 330, 310, 191, 234, 290, 330, 310]
+      }
+    ]
+  });
+
+  //超市
+  var myChart = echarts.init(document.getElementById('supermarket_echart'));
+  myChart.setOption({
+    color: ['#cec09d', '#24a83b'],
+    title: {
+      text: '本学期消费趋势图',
+      left: 'center',
+      textStyle: {}
+    },
+    tooltip: {
+      trigger: 'axis'
+    },
+    legend: {
+      x: 'right',
+      data: ['全向平均消费', '我的消费']
+    },
+    grid: {
+      //top:'14%',
+      left: '3%',
+      right: '8%',
+      bottom: '5%',
+      containLabel: true
+    },
+
+    xAxis: {
+      name: '日期',
+      type: 'category',
+      splitLine: {
+        show: true,
+        lineStyle: {
+          color: 'rgba(255,255,255,0.1)',
+        }
+      },
+      axisTick: {
+        show: false
+      },
+      boundaryGap: false,
+      data: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月']
+    },
+    yAxis: {
+      type: 'value',
+      name: '金额（元）',
+      axisLine: {
+        show: false,
+        lineStyle: {
+          //color:'rgba(255,255,255,0.5)',
+        }
+      },
+      axisTick: {
+        show: false
+      },
+      splitLine: {
+        show: true,
+        lineStyle: {
+          type: 'dashed',
+          color: 'rgba(0,0,0,0.2)',
+        }
+      },
+    },
+    series: [
+      {
+        name: '全向平均消费',
+        type: 'line',
+        stack: '总量',
+        data: [120, 132, 101, 134, 90, 230, 210, 101, 134, 90, 230, 210]
+      },
+      {
+        name: '我的消费',
+        type: 'line',
+        stack: '总量',
+        data: [220, 182, 191, 234, 290, 330, 310, 191, 234, 290, 330, 310]
+      }
+    ]
+  });
+
+  //医院
+  var myChart = echarts.init(document.getElementById('hospital_echart'));
+  myChart.setOption({
+    color: ['#a9dde8', '#3384c5'],
+    title: {
+      text: '本学期消费趋势图',
+      left: 'center',
+      textStyle: {}
+    },
+    tooltip: {
+      trigger: 'axis'
+    },
+    legend: {
+      x: 'right',
+      data: ['全向平均消费', '我的消费']
+    },
+    grid: {
+      //top:'14%',
+      left: '3%',
+      right: '8%',
+      bottom: '5%',
+      containLabel: true
+    },
+
+    xAxis: {
+      name: '日期',
+      type: 'category',
+      splitLine: {
+        show: true,
+        lineStyle: {
+          color: 'rgba(255,255,255,0.1)',
+        }
+      },
+      axisTick: {
+        show: false
+      },
+      boundaryGap: false,
+      data: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月']
+    },
+    yAxis: {
+      type: 'value',
+      name: '金额（元）',
+      axisLine: {
+        show: false,
+        lineStyle: {
+          //color:'rgba(255,255,255,0.5)',
+        }
+      },
+      axisTick: {
+        show: false
+      },
+      splitLine: {
+        show: true,
+        lineStyle: {
+          type: 'dashed',
+          color: 'rgba(0,0,0,0.2)',
+        }
+      },
+    },
+    series: [
+      {
+        name: '全向平均消费',
+        type: 'line',
+        stack: '总量',
+        data: [120, 132, 101, 134, 90, 230, 210, 101, 134, 90, 230, 210]
+      },
+      {
+        name: '我的消费',
+        type: 'line',
+        stack: '总量',
+        data: [220, 182, 191, 234, 290, 330, 310, 191, 234, 290, 330, 310]
+      }
+    ]
+  });
+
+  //用水
+  var myChart = echarts.init(document.getElementById('water_echart'));
+  myChart.setOption({
+    backgroundColor: 'rgba(255,255,255,0.8)',
+    color: ['#a9dde8', '#3384c5'],
+    title: {
+      text: '本学期消费趋势图',
+      left: 'center',
+      textStyle: {}
+    },
+    tooltip: {
+      trigger: 'axis'
+    },
+    legend: {
+      x: 'right',
+      data: ['全向平均消费', '我的消费']
+    },
+    grid: {
+      //top:'14%',
+      left: '3%',
+      right: '8%',
+      bottom: '5%',
+      containLabel: true
+    },
+
+    xAxis: {
+      name: '日期',
+      type: 'category',
+      splitLine: {
+        show: true,
+        lineStyle: {
+          color: 'rgba(255,255,255,0.1)',
+        }
+      },
+      axisTick: {
+        show: false
+      },
+      boundaryGap: false,
+      data: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月']
+    },
+    yAxis: {
+      type: 'value',
+      name: '金额（元）',
+      axisLine: {
+        show: false,
+        lineStyle: {
+          //color:'rgba(255,255,255,0.5)',
+        }
+      },
+      axisTick: {
+        show: false
+      },
+      splitLine: {
+        show: true,
+        lineStyle: {
+          type: 'dashed',
+          color: 'rgba(0,0,0,0.2)',
+        }
+      },
+    },
+    series: [
+      {
+        name: '全向平均消费',
+        type: 'line',
+        stack: '总量',
+        data: [120, 132, 101, 134, 90, 230, 210, 101, 134, 90, 230, 210]
+      },
+      {
+        name: '我的消费',
+        type: 'line',
+        stack: '总量',
+        data: [220, 182, 191, 234, 290, 330, 310, 191, 234, 290, 330, 310]
+      }
+    ]
+  });
+
+</script>
+</body>
+</html>
+
+
